@@ -1,10 +1,17 @@
+
 import React from "react";
 import Img from "../../assets/4.png";
 import Image from "next/image";
-
+import { motion } from "framer-motion"
+import { animationVariants } from "@/constants/animationVariants";
 const AboutUs = () => {
   return (
-    <div id="about" className="flex flex-col md:flex-row w-full h-screen bg-amber-800">
+    <motion.div
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.2 }}
+      id="about" className="flex flex-col md:flex-row w-full h-screen bg-amber-800">
 
       <div className="w-full md:w-1/2 p-0 md:p-8 flex items-center justify-center ">
 
@@ -19,7 +26,7 @@ const AboutUs = () => {
 
 
       <div className="w-full md:w-1/2 p-4 md:p-8 bg-gray-100 flex items-center justify-center">
-        <div className="text-center md:text-left">
+        <motion.div variants={animationVariants.fadeRight} className="text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-bold text-amber-800 mb-4">
             About Us
           </h2>
@@ -29,9 +36,9 @@ const AboutUs = () => {
             <br />
             We are committed to staying up-to-date with the latest trends and technologies in the real estate market, and we use our knowledge and expertise to guide our clients through the buying and selling process with confidence.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

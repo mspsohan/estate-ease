@@ -4,7 +4,7 @@ export const animationVariants = {
       animate: {
          scaleX: 0,
 
-         transition: { duration: 0.8 },
+         transition: { duration: 0.6 },
       },
    },
    fadeUp: {
@@ -12,19 +12,19 @@ export const animationVariants = {
       animate: {
          opacity: 1,
          y: 0,
-         transition: { duration: 0.6 },
+         transition: { duration: 0.3 },
       },
    },
    fadeIn: {
       initial: { opacity: 0 },
-      animate: { opacity: 1, transition: { duration: 0.6 } },
+      animate: { opacity: 1, transition: { duration: 0.3 } },
    },
    zoomOut: {
       initial: { scale: 1.2, opacity: 0 },
       animate: {
          scale: 1,
          opacity: 1,
-         transition: { duration: 0.6 },
+         transition: { duration: 0.3 },
       },
    },
    fadeLeft: {
@@ -32,7 +32,7 @@ export const animationVariants = {
       animate: {
          opacity: 1,
          x: 0,
-         transition: { duration: 0.6 },
+         transition: { duration: 0.3 },
       },
    },
    fadeRight: {
@@ -40,7 +40,7 @@ export const animationVariants = {
       animate: {
          opacity: 1,
          x: 0,
-         transition: { duration: 0.6 },
+         transition: { duration: 0.3 },
       },
    },
    zoomIn: {
@@ -48,7 +48,7 @@ export const animationVariants = {
       animate: {
          scale: 1,
          opacity: 1,
-         transition: { duration: 0.6 },
+         transition: { duration: 0.3 },
       },
    },
 };

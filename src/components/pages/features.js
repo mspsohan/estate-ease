@@ -2,7 +2,8 @@ import Image from "next/image";
 import Imagee from "../../assets/1.png";
 import Imageee from "../../assets/2.png";
 import Imageeee from "../../assets/3.png";
-
+// import { animationVariants } from "@/constants/animationVariants";
+// import { motion } from "framer-motion"
 const Features = () => {
   return (
     <div id="feature" className="w-full min-h-screen p-2 flex items-center bg-gradient-to-b from-white to-gray-400">
@@ -11,10 +12,21 @@ const Features = () => {
         <p className="text-lg text-gray-700 mb-8">
           Here are some of our featured properties:
         </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* <motion.div
+            initial="initial"
+            whileInView="animate"
+            variants={animationVariants.toLeft}
+            viewport={{ once: true, amount: 0.2 }}
+            className={`absolute w-full h-full  bg-gray-100 origin-left z-20 `}
+          >
+            <div className=""></div>
+          </motion.div> */}
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <div className="bg-white rounded-lg shadow-lg">
               <Image width="fill" height="fill" src={Imagee} alt="Property" className="w-full max-h-64 object-cover rounded-t-lg h-1/3 md:h-64" />
+
               <div className="py-6 px-4">
                 <h3 className="text-lg font-medium text-gray-900">123 Gulshan Road</h3>
                 <p className="text-sm text-gray-500">3 bd | 2 ba | 1,500 sqft</p>

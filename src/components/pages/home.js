@@ -1,11 +1,16 @@
+"use client"
 import Image from "next/image";
 import Img from "../../assets/main.png";
-
+import { motion } from "framer-motion"
 import { animationVariants } from "@/constants/animationVariants";
 
 const HomePage = () => {
   return (
-    <div id="home" className="w-full min-h-screen p-8 flex items-center bg-gray-200">
+    <motion.div initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.2 }}
+      id="home" className="w-full min-h-screen p-8 flex items-center bg-gray-200">
       <div className="max-w-7xl mx-auto md:flex md:flex-row-reverse md:items-center">
         <div className="md:w-1/2 md:pr-8 my-11">
           <Image width="fill" height="fill"
@@ -15,7 +20,7 @@ const HomePage = () => {
           />
         </div>
         <div className="md:w-1/2 md:pl-8">
-          <div className="text-center md:text-left">
+          <motion.div variants={animationVariants.fadeLeft} className="text-center md:text-left">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">Find Your <span className="text-amber-800">Dream Home</span></h1>
             <p className="text-lg text-gray-700 mb-8">
               Welcome to our real estate agency, where finding your dream home is our top priority. Our team of experienced agents is dedicated to providing exceptional service and helping you navigate the complex process of buying or selling a property
@@ -37,11 +42,11 @@ const HomePage = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-    </div>
+    </motion.div>
   );
 };
 
