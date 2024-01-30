@@ -39,8 +39,8 @@ const Navbar = () => {
    }, []);
 
    return (
-      <div className={`fixed top-0 z-50 w-full h-[80px] lg:h-[120px] px-4 text-black ${isScrolled ? "bg-white" : "bg-transparent"}`} >
-         <div className=" ">
+      <div className={`fixed top-0 z-50 w-full h-[80px] px-4 text-black ${isScrolled ? "bg-white" : "bg-transparent"}`} >
+         <div className={`${isScrolled ? "hidden" : ""}`}>
             <div className="container mx-auto hidden lg:flex lg:flex-row  lg:justify-between justify-center items-center space-y-1  text-gray-500 py-3 w-full">
                <div className="lg:flex lg:flex-row flex flex-col justify-center items-center space-x-12 lg:space-y-0 space-y-2">
                   <div className="flex flex-row space-x-2">

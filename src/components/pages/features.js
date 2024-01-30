@@ -2,9 +2,15 @@ import Image from "next/image";
 import Imagee from "../../assets/1.png";
 import Imageee from "../../assets/2.png";
 import Imageeee from "../../assets/3.png";
-// import { animationVariants } from "@/constants/animationVariants";
-// import { motion } from "framer-motion"
+import { animationVariants } from "@/constants/animationVariants";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 const Features = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <div id="feature" className="w-full min-h-screen p-2 flex items-center bg-gradient-to-b from-white to-gray-400">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -14,29 +20,33 @@ const Features = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {/* <motion.div
-            initial="initial"
-            whileInView="animate"
-            variants={animationVariants.toLeft}
-            viewport={{ once: true, amount: 0.2 }}
-            className={`absolute w-full h-full  bg-gray-100 origin-left z-20 `}
-          >
-            <div className=""></div>
-          </motion.div> */}
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-            <div className="bg-white rounded-lg shadow-lg">
-              <Image width="fill" height="fill" src={Imagee} alt="Property" className="w-full max-h-64 object-cover rounded-t-lg h-1/3 md:h-64" />
+          <div className='shadow-md shadow-[#040c16] hover:scale-105 duration-500'>
+            <div className='shadow-md shadow-[#040c16] hover:scale-105 duration-500'>
+              {/* <div className="absolute w-full h-full bg-black/50 "></div> */}
+              <motion.div
+                initial="initial"
+                whileInView="animate"
+                variants={animationVariants.toLeft}
+                viewport={{ once: true, amount: 0.2 }}
+                className={`absolute w-full h-full  bg-gray-100 origin-left z-20 `}
+              >
+                <div className=""></div>
+              </motion.div>
+              <div className="bg-white rounded-lg shadow-lg">
+                <Image width="fill" height="fill" src={Imagee} alt="Property" className="w-full max-h-64 object-cover rounded-t-lg h-1/3 md:h-64" />
 
-              <div className="py-6 px-4">
-                <h3 className="text-lg font-medium text-gray-900">123 Gulshan Road</h3>
-                <p className="text-sm text-gray-500">3 bd | 2 ba | 1,500 sqft</p>
-                <p className="text-lg font-bold text-gray-700 mt-4">$500,000</p>
-                <button className="mt-6 px-4 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-700">
-                  View Details
-                </button>
+                <div className="py-6 px-4">
+                  <h3 className="text-lg font-medium text-gray-900">123 Gulshan Road</h3>
+                  <p className="text-sm text-gray-500">3 bd | 2 ba | 1,500 sqft</p>
+                  <p className="text-lg font-bold text-gray-700 mt-4">$500,000</p>
+                  <button className="mt-6 px-4 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-700">
+                    View Details
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+
           <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
             <div className="bg-white rounded-lg shadow-lg">
               <Image src={Imageee} alt="Property" className="w-full max-h-64 object-cover rounded-t-lg h-1/3 md:h-64" />
@@ -70,31 +80,3 @@ const Features = () => {
 };
 
 export default Features;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
