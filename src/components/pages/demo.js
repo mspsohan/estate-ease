@@ -1,3 +1,4 @@
+"use client"
 import videos from "../../assets/video.mp4";
 import HouseIcon from "../../assets/house.jpg";
 import LocationIcon from "../../assets/location.png";
