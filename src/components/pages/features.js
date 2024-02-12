@@ -2,15 +2,15 @@ import Image from "next/image";
 import Imagee from "../../assets/1.png";
 import Imageee from "../../assets/2.png";
 import Imageeee from "../../assets/3.png";
-import { animationVariants } from "@/constants/animationVariants";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { animationVariants } from "@/constants/animationVariants";
+// import { motion } from "framer-motion";
+// import { useEffect, useState } from "react";
 const Features = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
   return (
     <div id="feature" className="w-full min-h-screen p-2 flex items-center bg-gradient-to-b from-white to-gray-400">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -23,7 +23,7 @@ const Features = () => {
           <div className='shadow-md shadow-[#040c16] hover:scale-105 duration-500'>
             <div className='shadow-md shadow-[#040c16] hover:scale-105 duration-500'>
               {/* <div className="absolute w-full h-full bg-black/50 "></div> */}
-              <motion.div
+              {/* <motion.div
                 initial="initial"
                 whileInView="animate"
                 variants={animationVariants.toLeft}
@@ -31,7 +31,7 @@ const Features = () => {
                 className={`absolute w-full h-full  bg-gray-100 origin-left z-20 `}
               >
                 <div className=""></div>
-              </motion.div>
+              </motion.div> */}
               <div className="bg-white rounded-lg shadow-lg">
                 <Image width="fill" height="fill" src={Imagee} alt="Property" className="w-full max-h-64 object-cover rounded-t-lg h-1/3 md:h-64" />
 
