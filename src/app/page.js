@@ -24,7 +24,7 @@ export default function Home() {
       <OurClients />
       <Teams />
       <ContactUs />
-      <App />
+      {/* <App /> */}
       <Footer />
     </div>
   );

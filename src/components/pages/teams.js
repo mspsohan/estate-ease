@@ -16,6 +16,28 @@ import image3 from "../../assets/modymagdy-270x340.png"
 import image4 from "../../assets/marcoghaly-270x340.png"
 import { FaFacebook, FaSkype, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 const Teams = () => {
+   const breakpoints = {
+      // when window width is >= 320px
+      480: {
+         slidesPerView: 1,
+         spaceBetween: 20
+      },
+      // when window width is >= 480px
+      680: {
+         slidesPerView: 2,
+         spaceBetween: 30
+      },
+      1024: {
+         slidesPerView: 3,
+         spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1280: {
+         slidesPerView: 4,
+         spaceBetween: 30
+      }
+   }
+
    return (
       <div className='container mx-auto'>
          <div className="text-center mb-10">
@@ -23,8 +45,7 @@ const Teams = () => {
             <p className="text-3xl font-bold text-gray-900 mb-4">MEET OUR AGENTS</p>
          </div>
          <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
+            breakpoints={breakpoints}
             pagination={{
                clickable: true,
             }}
@@ -32,82 +53,81 @@ const Teams = () => {
             className="mySwiper"
          >
             <SwiperSlide>
-               <div className='shadow-xl flex flex-col justify-center items-center pb-5'>
+               <div className='shadow flex flex-col justify-center items-center pb-5'>
                   <div className='w-80 h-96'>
-                     <Image width="fill" height="fill" src={image1} alt="Location Icon" className="w-80 h-96 flex justify-center items-center object-cover" />
+                     <Image width="fill" height="fill" src={image1} alt="Location Icon" className="w-full h-96 flex justify-center items-center object-cover" />
                   </div>
-                  <div className='h-28 w-[380px] rounded bg-black relative text-white text-center flex flex-col justify-center'>
-                     <h2>Sherief El Arafa</h2>
+                  <div className='h-28 w-full rounded bg-black relative text-white text-center'>
+                     <h2 className='pt-6 hover:text-amber-500'>Sherief El Arafa</h2>
                      <p>5 Properties</p>
-                     <div className='absolute -bottom-3 h-10 bg-amber-800 w-64 rounded z-30 flex justify-center items-center left-[18%] right-[5%]'>
-                        <ul className='bg-amber-800 flex gap-5'>
-                           <li><a href="https://facebook.com"></a><FaFacebook className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaTwitter className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaSkype className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaWhatsapp className='text-2xl' /></li>
+                     <div className='-mb-12 h-10 bg-amber-800 w-full rounded z-30 flex justify-center items-center'>
+                        <ul className='bg-amber-800 flex gap-5' style={{ margin: 'auto' }}>
+                           <li><a href="https://facebook.com"><FaFacebook className='text-2xl' /></a></li>
+                           <li><a href="https://twitter.com"><FaTwitter className='text-2xl' /></a></li>
+                           <li><a href="https://skype.com"><FaSkype className='text-2xl' /></a></li>
+                           <li><a href="https://whatsapp.com"><FaWhatsapp className='text-2xl' /></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
             </SwiperSlide>
             <SwiperSlide>
-               <div className='shadow-xl flex flex-col justify-center items-center pb-5'>
+               <div className='shadow flex flex-col justify-center items-center pb-5'>
                   <div className='w-80 h-96'>
-                     <Image width="fill" height="fill" src={image2} alt="Location Icon" className="w-80 h-96 flex justify-center items-center object-cover" />
+                     <Image width="fill" height="fill" src={image2} alt="Location Icon" className="w-full h-96 flex justify-center items-center object-cover" />
                   </div>
-                  <div className='h-28 w-[380px] rounded bg-black relative text-white text-center flex flex-col justify-center'>
-                     <h2>Marco Ghaly</h2>
+                  <div className='h-28 w-full rounded bg-black relative text-white text-center'>
+                     <h2 className='pt-6 hover:text-amber-500'>Marco Ghaly</h2>
                      <p>5 Properties</p>
-                     <div className='absolute -bottom-3 h-10 bg-amber-800 w-64 rounded z-30 flex justify-center items-center left-[18%] right-[5%]'>
-                        <ul className='bg-amber-800 flex gap-5'>
-                           <li><a href="https://facebook.com"></a><FaFacebook className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaTwitter className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaSkype className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaWhatsapp className='text-2xl' /></li>
+                     <div className='-mb-12 h-10 bg-amber-800 w-full rounded z-30 flex justify-center items-center'>
+                        <ul className='bg-amber-800 flex gap-5' style={{ margin: 'auto' }}>
+                           <li><a href="https://facebook.com"><FaFacebook className='text-2xl' /></a></li>
+                           <li><a href="https://twitter.com"><FaTwitter className='text-2xl' /></a></li>
+                           <li><a href="https://skype.com"><FaSkype className='text-2xl' /></a></li>
+                           <li><a href="https://whatsapp.com"><FaWhatsapp className='text-2xl' /></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
             </SwiperSlide>
             <SwiperSlide>
-               <div className='shadow-xl flex flex-col justify-center items-center pb-5'>
+               <div className='shadow flex flex-col justify-center items-center pb-5'>
                   <div className='w-80 h-96'>
-                     <Image width="fill" height="fill" src={image3} alt="Location Icon" className="w-80 h-96 flex justify-center items-center object-cover" />
+                     <Image width="fill" height="fill" src={image3} alt="Location Icon" className="w-full h-96 flex justify-center items-center object-cover" />
                   </div>
-                  <div className='h-28 w-[380px] rounded bg-black relative text-white text-center flex flex-col justify-center'>
-                     <h2>Mona Ghaly</h2>
+                  <div className='h-28 w-full rounded bg-black relative text-white text-center'>
+                     <h2 className='pt-6 hover:text-amber-500'>Mona Ghaly</h2>
                      <p>5 Properties</p>
-                     <div className='absolute -bottom-3 h-10 bg-amber-800 w-64 rounded z-30 flex justify-center items-center left-[18%] right-[5%]'>
-                        <ul className='bg-amber-800 flex gap-5'>
-                           <li><a href="https://facebook.com"></a><FaFacebook className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaTwitter className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaSkype className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaWhatsapp className='text-2xl' /></li>
+                     <div className='-mb-12 h-10 bg-amber-800 w-full rounded z-30 flex justify-center items-center'>
+                        <ul className='bg-amber-800 flex gap-5' style={{ margin: 'auto' }}>
+                           <li><a href="https://facebook.com"><FaFacebook className='text-2xl' /></a></li>
+                           <li><a href="https://twitter.com"><FaTwitter className='text-2xl' /></a></li>
+                           <li><a href="https://skype.com"><FaSkype className='text-2xl' /></a></li>
+                           <li><a href="https://whatsapp.com"><FaWhatsapp className='text-2xl' /></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
             </SwiperSlide>
             <SwiperSlide>
-               <div className='shadow-xl flex flex-col justify-center items-center pb-5'>
+               <div className='shadow flex flex-col justify-center items-center pb-5'>
                   <div className='w-80 h-96'>
-                     <Image width="fill" height="fill" src={image4} alt="Location Icon" className="w-80 h-96 flex justify-center items-center object-cover" />
+                     <Image width="fill" height="fill" src={image4} alt="Location Icon" className="w-full h-96 flex justify-center items-center object-cover" />
                   </div>
-                  <div className='h-28 w-[380px] rounded bg-black relative text-white text-center flex flex-col justify-center'>
-                     <h2>Mody Magdy</h2>
+                  <div className='h-28 w-full rounded bg-black relative text-white text-center'>
+                     <h2 className='pt-6 hover:text-amber-500'>Mody Magdy</h2>
                      <p>5 Properties</p>
-                     <div className='absolute -bottom-3 h-10 bg-amber-800 w-64 rounded z-30 flex justify-center items-center left-[18%] right-[5%]'>
-                        <ul className='bg-amber-800 flex gap-5'>
-                           <li><a href="https://facebook.com"></a><FaFacebook className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaTwitter className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaSkype className='text-2xl' /></li>
-                           <li><a href="https://facebook.com"></a><FaWhatsapp className='text-2xl' /></li>
+                     <div className='-mb-12 h-10 bg-amber-800 w-full rounded z-30 flex justify-center items-center'>
+                        <ul className='bg-amber-800 flex gap-5' style={{ margin: 'auto' }}>
+                           <li><a href="https://facebook.com"><FaFacebook className='text-2xl' /></a></li>
+                           <li><a href="https://twitter.com"><FaTwitter className='text-2xl' /></a></li>
+                           <li><a href="https://skype.com"><FaSkype className='text-2xl' /></a></li>
+                           <li><a href="https://whatsapp.com"><FaWhatsapp className='text-2xl' /></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
             </SwiperSlide>
-
          </Swiper>
       </div>
    );
